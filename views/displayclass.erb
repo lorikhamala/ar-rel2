@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> <head> </head> <body>
+
+<h1> <%= @collegeclass.name %> </h1>
+
+<p>Class ID: <%= @collegeclass.id.to_s %> </p>
+<p>Instructor: <%= @collegeclass.instructor %> </p>
+<br>
+
+<h3> <%= @collegeclass.name %> Class Roster </h3>
+
+<ul> 
+<% @collegeclass.students.each do |s| %>
+
+<li>
+	<a href="/displaystudent/<%= s.id %>"> <%= s.name %> </a>
+</li>
+<% end %>
+</ul>
+
+<br>
+<br>
+
+<a href="/">Back to Admin Panel</a> <br>
+	
+</body>
+</html>

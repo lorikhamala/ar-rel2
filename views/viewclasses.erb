@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html> <head> </head> <body>
+	
+
+<h1> View All Classes </h1>
+
+<ul>
+	<% @college_class.each do |e| %>
+	<li> <%= e.name + " | " + e.instructor %> </li>
+	<% end %>
+</ul>
+<br>
+
+
+       
+
+<a href="/">Back to Admin Panel</a> <br>
+
+</body>
+</html>

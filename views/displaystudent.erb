@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> <head> </head> <body>
+
+<h1>Student Name: <%= @student.name %> </h1>
+
+<p>Student ID: <%= @student.id.to_s %> </p>
+<p>Email: <%= @student.email %> </p>
+<br>
+
+<h3> <%= @student.name %>'s Classes </h3>
+
+
+<% college_class = @student.college_classes %>
+<% college_class.each do |e| %>
+
+<ul> <li> <a href="/displayclass/ <%= e.id%>">  <%= e.name %> </a> </li> </ul>
+
+
+	
+<% end %>
+
+<br>
+<br>
+
+<a href="/">Back to Admin Panel</a> <br>
+	
+</body>
+</html>

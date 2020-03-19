@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> <head> </head> <body>
+	
+
+<h1> All Code the Dream University Students </h1>
+<h3> Click on name to show details</h3>
+
+<ul>
+	<% @students.each do |e| %>
+
+		<% @link = "/displaystudent/#{e.id}" %>
+		<li>
+		 <a href="<%= @link %>"> <%= e.name %>  </a>		
+	</li>
+	<% end %>
+</ul>
+<br>
+
+
+<a href="/">Back to Admin Panel</a> <br>
+
+</body>
+</html>
